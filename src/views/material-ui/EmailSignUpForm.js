@@ -65,6 +65,15 @@ class EmailSignUpForm extends React.Component {
                errors={this.props.auth.getIn(["emailSignUp", this.getEndpoint(), "errors", "email"])}
                onChange={this.handleInput.bind(this, "email")}
                {...this.props.inputProps.email} />
+                       
+        <Input type="text"
+               floatingLabelText="Username"
+               className="email-sign-up-email"
+               disabled={disabled}
+               value={this.props.auth.getIn(["emailSignUp", this.getEndpoint(), "form", "name"])}
+               errors={this.props.auth.getIn(["emailSignUp", this.getEndpoint(), "errors", "name"])}
+               onChange={this.handleInput.bind(this, "name")}
+               {...this.props.inputProps.name} />
 
         <Input type="password"
                floatingLabelText="Password"
